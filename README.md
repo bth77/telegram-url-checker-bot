@@ -41,7 +41,7 @@ def check_url(update: Update, context: CallbackContext) -> None:
         url = 'https://' + url
 
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=20)
         if response.status_code == 200:
             update.message.reply_text(f"✅ **{url}** aktif (Status: 200)")
         else:
